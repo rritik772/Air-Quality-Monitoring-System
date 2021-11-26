@@ -1,0 +1,29 @@
+
+# editor config files
+.vim
+.emacs
+
+# byte compilied files
+__pycache__/
+*.py[cod]
+settings.py
+
+# Distribution / packaging files
+.Python
+bin/
+build/
+dist/
+lib/
+lib64/
+parts/
+
+# install logs
+pip-log.txt
+pip-delete-this.directry.txt
+
+# builder
+target/
+
+# enviroment varibles
+env/
+.env
