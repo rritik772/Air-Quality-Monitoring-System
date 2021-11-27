@@ -4,7 +4,7 @@
 import os
 from dotenv import load_dotenv
 from paho.mqtt import client as mqtt_client
-from read import dummy_data
+from read import dummy_data, MQ
 #: }}}
 
 #: Loading enviroment varables {{{
@@ -75,10 +75,12 @@ def publish_data(client: mqtt_client, topic: str) -> None:
 def run():
     ''' This function work as a main function to the file '''
 
-    client = connect_mqtt()
-    publish_data(client, get_topic())
-    client.loop_forever()
-
+    # client = connect_mqtt()
+    # publish_data(client, get_topic())
+    # client.loop_forever()
+    mq = MQ()
+    data = mq.mq_percentage()
+    pritn(data)
 
 if __name__ == '__main__':
     run()
